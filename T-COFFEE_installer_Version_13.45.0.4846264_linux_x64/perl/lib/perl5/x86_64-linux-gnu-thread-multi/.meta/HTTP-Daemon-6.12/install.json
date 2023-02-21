@@ -1,1 +1,0 @@
-{"target":"HTTP::Daemon","pathname":"O/OA/OALDERS/HTTP-Daemon-6.12.tar.gz","version":"6.12","name":"HTTP::Daemon","dist":"HTTP-Daemon-6.12","provides":{"HTTP::Daemon":{"file":"HTTP/Daemon.pm","version":"6.12"}}}
