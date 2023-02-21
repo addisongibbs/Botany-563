@@ -1,0 +1,1 @@
+{"version":"6.19","name":"Net::HTTP","dist":"Net-HTTP-6.19","provides":{"Net::HTTP::NB":{"version":"6.19","file":"Net/HTTP/NB.pm"},"Net::HTTPS":{"version":"6.19","file":"Net/HTTPS.pm"},"Net::HTTP":{"file":"Net/HTTP.pm","version":"6.19"},"Net::HTTP::Methods":{"version":"6.19","file":"Net/HTTP/Methods.pm"}},"target":"Net::HTTP","pathname":"O/OA/OALDERS/Net-HTTP-6.19.tar.gz"}
