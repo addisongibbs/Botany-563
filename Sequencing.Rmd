@@ -26,6 +26,27 @@ library(phangorn)
 ```
 
 ```{r}
-dna <- fasta2DNAbin(file="http://adegenet.r-forge.r-project.org/files/usflu.fasta")
+## distance based
+dna <- fasta2DNAbin(file="sequence-aligned-muscle.fasta")
 dna
+```
+```{r}
+D <- dist.dna(dna, model="TN93")
+tre <- nj(D)
+tre <- ladderize(tre)
+plot(tre, cex=.6)
+title("A simple NJ tree")
+```
+
+
+```{r}
+## parsimony
+## read as phangorn object:
+dna2 <- as.phyDat(dna)
+tre.ini <- nj(dist.dna(dna,model="raw"))
+parsimony(tre.ini, dna2)
+## 422
+tre.pars <- optim.parsimony(tre.ini, dna2)
+plot(tre.pars, cex=0.6)
+
 ```
