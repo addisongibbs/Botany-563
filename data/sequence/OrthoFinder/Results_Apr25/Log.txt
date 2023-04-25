@@ -1,0 +1,4 @@
+2023-04-25 14:09:57 : Started OrthoFinder version 2.5.4
+Command Line: /Users/addisongibbs/miniconda3/bin/orthofinder -f sequence/
+
+WorkingDirectory_Base: /Users/addisongibbs/Desktop/Botany-563/data/sequence/OrthoFinder/Results_Apr25/WorkingDirectory/
