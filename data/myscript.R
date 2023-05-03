@@ -1,7 +1,7 @@
 library(ape)
 library(adegenet)
 library(phangorn)
-dna <- fasta2DNAbin("SEQUENCE.fasta")
+dna <- fasta2DNAbin("SEQ-ALIGNED.fasta")
 print("data has been read")
 D <- dist.dna(dna, model="TN93")
 print("D")

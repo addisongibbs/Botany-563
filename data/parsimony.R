@@ -1,7 +1,7 @@
 library(ape)
 library(adegenet)
 library(phangorn)
-dna <- fasta2DNAbin(file="SEQUENCE.fasta")
+dna <- fasta2DNAbin(file="SEQ-ALIGNED.fasta")
 print("fasta")
 dna2 <- as.phyDat(dna)
 print("dna")

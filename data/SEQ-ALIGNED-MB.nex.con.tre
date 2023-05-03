@@ -1,0 +1,20 @@
+#NEXUS
+[ID: 8854554416]
+begin taxa;
+	dimensions ntax=4;
+	taxlabels
+		MD
+		MF
+		MS
+		MP
+		;
+end;
+begin trees;
+	translate
+		1	MD,
+		2	MF,
+		3	MS,
+		4	MP
+		;
+   tree con_50_majrule = [&U] (1[&prob=1.00000000e+00,prob(percent)="100"]:8.805789e-02[&length_mean=8.81943579e-02,length_median=8.80578900e-02,length_95%HPD={7.95799900e-02,9.61413500e-02}],2[&prob=1.00000000e+00,prob(percent)="100"]:1.793701e-02[&length_mean=1.77470997e-02,length_median=1.79370100e-02,length_95%HPD={1.50413100e-02,2.05620900e-02}],(3[&prob=1.00000000e+00,prob(percent)="100"]:3.536429e-03[&length_mean=3.58253548e-03,length_median=3.53642900e-03,length_95%HPD={2.43995300e-03,4.57233600e-03}],4[&prob=1.00000000e+00,prob(percent)="100"]:2.949583e-03[&length_mean=2.94727347e-03,length_median=2.94958300e-03,length_95%HPD={2.11949200e-03,3.87749200e-03}])[&prob=1.00000000e+00,prob(percent)="100"]:1.635762e-02[&length_mean=1.64666240e-02,length_median=1.63576200e-02,length_95%HPD={1.36606800e-02,1.92591800e-02}]);
+end;
