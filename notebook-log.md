@@ -1,12 +1,12 @@
 ## My Data
-I chose data on the complete mitochondrial genome of the freshwater bass family.
-I chose this because my research is in water toxicology, so I do a lot of work with fish in the lab. I've never gotten to work with bass, but I found some data on one of them and that got me interested.
-GenBank had only 4 different species' complete mitochondrial genome, which was a little sad but was okay because I had something I could still work with.
+- I chose data on the complete mitochondrial genome of the freshwater bass family.
+- I chose this because my research is in water toxicology, so I do a lot of work with fish in the lab. I've never gotten to work with bass, but I found some data on one of them and that got me interested.
+- GenBank had only 4 different species' complete mitochondrial genome, which was a little sad but was okay because I had something I could still work with.
 ## MUSCLE
-I ran it through MUSCLE to get an aligned sequence. I chose MUSCLE mostly because it was the only one I could get to work with my data and on my generation of MacBook.
-Download MUSCLE:
+- I ran it through MUSCLE to get an aligned sequence. I chose MUSCLE mostly because it was the only one I could get to work with my data and on my generation of MacBook.
+- Download MUSCLE:
     `muscle3.8.31_i86darwin64.tar.gz`
-Using MUSCLE:
+- Using MUSCLE:
 `(base) addisongibbs@AG botany-563 % software/muscle3.8.31_i86darwin64 -in SEQUENCE.fasta -out SEQ-ALIGNED.fasta`
 
 MUSCLE v3.8.31 by Robert C. Edgar
@@ -31,11 +31,11 @@ SEQUENCE 4 seqs, max length 16490, avg  length 16486
 This gave me an aligned sequence called SEQ-ALIGNED.fasta.
 
 ## Distance and Parsimony
-First, we must install and load packages in terminal to perform these functions.
+- First, we must install and load packages in terminal to perform these functions.
     install.packages("adegenet", dep=TRUE)
     install.packages("phangorn", dep=TRUE)
     *I did this directly in terminal because when I put it in my rscript code it gave me an error
-Distance Based: Put this code into a file named myscript.R
+#### Distance Based: Put this code into a file named myscript.R
     
    library(ape)
 library(adegenet)
@@ -91,8 +91,8 @@ The following object is masked from ‘package:adegenet’:
         control + A + D - detaches screen
     screen -r distance - brings it back
 
-Parsimony Based:
-put this code into an rscript file called parsimony.R
+#### Parsimony Based:
+- put this code into an rscript file called parsimony.R
    library(ape)
 library(adegenet)
 library(phangorn)
@@ -131,75 +131,6 @@ The following object is masked from ‘package:adegenet’:
 [1] 23059
 Final p-score 1592 after  0 nni operations
 
-## OrthoFinder
-    Install OrthoFinder:
-`conda install -c bioconda orthofinder`
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
-    Assure Orthofinder is installed correctly
-`orthofinder -h `
-
-OrthoFinder version 2.5.4 Copyright (C) 2014 David Emms
-
-SIMPLE USAGE:
-Run full OrthoFinder analysis on FASTA format proteomes in <dir>
-  orthofinder [options] -f <dir>
-
-Add new species in <dir1> to previous run in <dir2> and run new analysis
-  orthofinder [options] -f <dir1> -b <dir2>
-
-OPTIONS:
- -t <int>        Number of parallel sequence search threads [Default = 4]
- -a <int>        Number of parallel analysis threads
- -d              Input is DNA sequences
- -M <txt>        Method for gene tree inference. Options 'dendroblast' & 'msa'
-                 [Default = dendroblast]
- -S <txt>        Sequence search program [Default = diamond]
-                 Options: blast, diamond, diamond_ultra_sens, blast_gz, mmseqs, blast_nucl
- -A <txt>        MSA program, requires '-M msa' [Default = mafft]
-                 Options: mafft, muscle
- -T <txt>        Tree inference method, requires '-M msa' [Default = fasttree]
-                 Options: fasttree, raxml, raxml-ng, iqtree
- -s <file>       User-specified rooted species tree
- -I <int>        MCL inflation parameter [Default = 1.5]
- -x <file>       Info for outputting results in OrthoXML format
- -p <dir>        Write the temporary pickle files to <dir>
- -1              Only perform one-way sequence search
- -X              Don't add species names to sequence IDs
- -y              Split paralogous clades below root of a HOG into separate HOGs
- -z              Don't trim MSAs (columns>=90% gap, min. alignment length 500)
- -n <txt>        Name to append to the results directory
- -o <txt>        Non-default results directory
- -h              Print this help text
-
-WORKFLOW STOPPING OPTIONS:
- -op             Stop after preparing input files for BLAST
- -og             Stop after inferring orthogroups
- -os             Stop after writing sequence files for orthogroups
-                 (requires '-M msa')
- -oa             Stop after inferring alignments for orthogroups
-                 (requires '-M msa')
- -ot             Stop after inferring gene trees for orthogroups 
-
-WORKFLOW RESTART COMMANDS:
- -b  <dir>         Start OrthoFinder from pre-computed BLAST results in <dir>
- -fg <dir>         Start OrthoFinder from pre-computed orthogroups in <dir>
- -ft <dir>         Start OrthoFinder from pre-computed gene trees in <dir>
-
-LICENSE:
- Distributed under the GNU General Public License (GPLv3). See License.md
-
-CITATION:
- When publishing work that uses OrthoFinder please cite:
- Emms D.M. & Kelly S. (2019), Genome Biology 20:238
-
- If you use the species tree in your work then please also cite:
- Emms D.M. & Kelly S. (2017), MBE 34(12): 3267-3278
- Emms D.M. & Kelly S. (2018), bioRxiv https://doi.org/10.1101/267914
- 
-    Running OrthoFinder:
-
- 
 ## RAxML-NG
 Checking the Version:
 - `addisongibbs@AG raxml-ng_v1.1.0_macos_x86_64 % ./raxml-ng -v`
@@ -273,9 +204,9 @@ Elapsed time: 0.015 seconds
 
 ## MrBayes
 - Converting to .nexus file:
-- records = SeqIO.parse("SEQ-ALIGNED.fasta", "fasta")
-- count = SeqIO.write(records, "SEQ.nexus", "nexus")
-- print("Converted %i records" % count)
+    records = SeqIO.parse("SEQ-ALIGNED.fasta", "fasta")
+    count = SeqIO.write(records, "SEQ.nexus", "nexus")
+    print("Converted %i records" % count)
 
 - Setup:
     create text file mbblock with the following text:
@@ -295,7 +226,7 @@ end;
     -Attach mbblock.txt file to data:
     `cat SEQ-ALIGNED.nex mbblock.txt > SEQ-ALIGNED-MB.nex`
 
-Running MrBayes:
+- Running MrBayes:
 
    ` mb SEQ-ALIGNED-MB.nex`
     
