@@ -5,9 +5,9 @@ GenBank had only 4 different species' complete mitochondrial genome, which was a
 ## MUSCLE
 I ran it through MUSCLE to get an aligned sequence. I chose MUSCLE mostly because it was the only one I could get to work with my data and on my generation of MacBook.
 Download MUSCLE:
-    muscle3.8.31_i86darwin64.tar.gz
+    `muscle3.8.31_i86darwin64.tar.gz`
 Using MUSCLE:
-(base) addisongibbs@AG botany-563 % software/muscle3.8.31_i86darwin64 -in SEQUENCE.fasta -out SEQ-ALIGNED.fasta 
+`(base) addisongibbs@AG botany-563 % software/muscle3.8.31_i86darwin64 -in SEQUENCE.fasta -out SEQ-ALIGNED.fasta`
 
 MUSCLE v3.8.31 by Robert C. Edgar
 
@@ -49,7 +49,7 @@ title("A simple NJ tree")
 
     
     
-    % Rscript myscript.R      
+   ` % Rscript myscript.R    `  
     output:
 Loading required package: ade4
 
@@ -105,7 +105,7 @@ plot(tre.pars, cex=0.6)
 title("plotted tree")
 
     
-   % Rscript parsimony.R
+   `% Rscript parsimony.R`
    output:
 The following object is masked from ‘package:adegenet’:
 
@@ -133,11 +133,11 @@ Final p-score 1592 after  0 nni operations
 
 ## OrthoFinder
     Install OrthoFinder:
-conda install -c bioconda orthofinder
+`conda install -c bioconda orthofinder`
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
     Assure Orthofinder is installed correctly
-orthofinder -h 
+`orthofinder -h `
 
 OrthoFinder version 2.5.4 Copyright (C) 2014 David Emms
 
