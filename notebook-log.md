@@ -202,7 +202,7 @@ CITATION:
  
 ## RAxML-NG
 Checking the Version:
-addisongibbs@AG raxml-ng_v1.1.0_macos_x86_64 % ./raxml-ng -v
+- `addisongibbs@AG raxml-ng_v1.1.0_macos_x86_64 % ./raxml-ng -v`
 
 RAxML-NG v. 1.1.0 released on 29.11.2021 by The Exelixis Lab.
 Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
@@ -212,7 +212,7 @@ Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!
 
 System: Intel(R) Core(TM) i5-8210Y CPU @ 1.60GHz, 2 cores, 8 GB RAM
 -Ran it one time and obtained this ERROR:
-./raxml-ng --check --msa data/SEQ-ALIGNED.fasta --model GTR+G
+`./raxml-ng --check --msa data/SEQ-ALIGNED.fasta --model GTR+G`
 
 RAxML-NG v. 1.1.0 released on 29.11.2021 by The Exelixis Lab.
 Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
@@ -272,12 +272,12 @@ Elapsed time: 0.015 seconds
 
 
 ## MrBayes
-Converting to .nexus file:
-records = SeqIO.parse("SEQ-ALIGNED.fasta", "fasta")
-count = SeqIO.write(records, "SEQ.nexus", "nexus")
-print("Converted %i records" % count)
+- Converting to .nexus file:
+- records = SeqIO.parse("SEQ-ALIGNED.fasta", "fasta")
+- count = SeqIO.write(records, "SEQ.nexus", "nexus")
+- print("Converted %i records" % count)
 
-Setup:
+- Setup:
     create text file mbblock with the following text:
     begin mrbayes;
     set autoclose=yes;
@@ -293,11 +293,11 @@ Setup:
 end;
 
     -Attach mbblock.txt file to data:
-    cat SEQ-ALIGNED.nex mbblock.txt > SEQ-ALIGNED-MB.nex
+    `cat SEQ-ALIGNED.nex mbblock.txt > SEQ-ALIGNED-MB.nex`
 
 Running MrBayes:
 
-    mb SEQ-ALIGNED-MB.nex
+   ` mb SEQ-ALIGNED-MB.nex`
     
  MrBayes 3.2.7a x86_64
 
@@ -740,7 +740,7 @@ B
 ## IQTree
 I ran IQTree through terminal. It seemed I had previously downloaded the packages because I did not have to do any installation for this project.
     Running IQTree on my data:
-    iqtree -s SEQ-ALIGNED.fasta -bb 1000 -nt AUTO
+    `iqtree -s SEQ-ALIGNED.fasta -bb 1000 -nt AUTO`
     Output:
     IQ-TREE multicore version 2.1.4-beta COVID-edition for Mac OS X 64-bit built Jun 24 2021
 Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
